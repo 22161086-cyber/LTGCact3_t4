@@ -17,10 +17,10 @@ class ProductoFactory extends Factory
      */
     public function definition(): array
     {
-        return [
+      return [
             'categoria_id' => \App\Models\Categoria::inRandomOrder()->first()->id ?? 1,
             'nombre' => $this->faker->word(),
-            'descripcion' => $this->faker->sentence(),
+            'descripcion' => 'Este es un excelente producto para la categoría seleccionada, cuenta con garantía oficial y alta durabilidad en el hogar.',
             'precio' => $this->faker->randomFloat(2, 10, 1000),
             'stock' => $this->faker->numberBetween(1, 100),
         ];
